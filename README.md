@@ -3,14 +3,14 @@
     Pocketmine plugin
 </div>
 
-#Description:
+# Description:
 This is a open code project for whoever wants to collaborate.<br>
 This plugin is based in the Manga and Anime of Sword Art Online<br>
 owned by Kawahara Reki. We are planing to cover every single detail<br>
 showed in the Manga and Anime so players can have the best experience<br>
 possible.
 
-#Contributors:
+# Contributors:
 | Role | Name |
 | --- | --- |
 | Development Leader | JustJ0rd4n(https://github.com/JustJ0rd4n) |
@@ -21,7 +21,7 @@ The content showed in this project its owned by Kawahara Reki.
 This is a non-profit project, its just for fun.
 ```
 
-#License:
+# License:
 ```
 /**
  * Adapted from the Wizardry License
