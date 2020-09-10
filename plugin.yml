@@ -1,0 +1,14 @@
+name: Sword Art Online
+main: sao\Main
+description: "A Sword Art Online plugin for servers"
+api: [3.0.0, 4.0.0]
+version: 0.0.1
+author: JustJ0rd4n
+website: https://github.com/JustJ0rd4n/SAO-Plugin
+
+permissions:
+  soa.mod:
+    description: "A permission for the game moderator"
+    children:
+      sao.support:
+        description: "A permission for the game support"
