@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://imgur.com/a/sdJA7Gm"></img><br>
+    <img src="https://i.imgur.com/NhWXOJr.png"></img><br>
     Sword Art Online<br>
     Pocketmine plugin
 </div>
