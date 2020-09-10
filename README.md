@@ -15,7 +15,7 @@ possible.
 | --- | --- |
 | Development Leader | JustJ0rd4n(https://github.com/JustJ0rd4n) |
 
-#Disclaimer:
+# Disclaimer:
 ```
 The content showed in this project its owned by Kawahara Reki.
 This is a non-profit project, its just for fun.
