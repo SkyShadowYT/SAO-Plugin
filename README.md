@@ -13,7 +13,7 @@ possible.
 # Contributors:
 | Role | Name |
 | --- | --- |
-| Development Leader | JustJ0rd4n(https://github.com/JustJ0rd4n) |
+| Development Leader | [JustJ0rd4n](https://github.com/JustJ0rd4n) |
 
 # Disclaimer:
 ```
