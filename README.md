@@ -1,5 +1,5 @@
 <div align="center">
-    #Sword Art Online<br>
+    # Sword Art Online<br>
     Pocketmine plugin
 </div>
 
