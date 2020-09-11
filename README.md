@@ -1,6 +1,6 @@
 <div align="center">
     <img src="https://i.imgur.com/NhWXOJr.png"></img>
-    **Sword Art Online**<br>
+    𝗦𝘄𝗼𝗿𝗱 𝗔𝗿𝘁 𝗢𝗻𝗹𝗶𝗻𝗲<br>
     Pocketmine plugin
 </div>
 
