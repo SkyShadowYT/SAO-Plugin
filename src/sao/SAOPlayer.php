@@ -6,8 +6,8 @@ use pocketmine\Player;
 
 class SAOPlayer extends Player {
 
-    /** @var int $role */
-    private $role = 0;
+    /** @var Role $role */
+    private $role;
 
     /** @var int $xp */
     private $xp = 0;
@@ -18,35 +18,26 @@ class SAOPlayer extends Player {
     /** @var int $money */
     private $money = 0;
 
-    /** @var string $guild */
-    private $guild = "NONE";
+    /** @var Guild $guild */
+    private $guild = null;
 
-    /** @var int $party */
+    /** @var Party $party */
     private $party = 0;
 
     /** @var array $friends */
     private $friends = [];
 
-    /** @var int ROLE_PLAYER */
-    const ROLE_PLAYER = 0;
-
-    /** @var int ROLE_SUPPORT */
-    const ROLE_SUPPORT = 1;
-
-    /** @var int ROLE_MODERATOR */
-    const ROLE_MODERATOR = 2;
-
     /**
-     * @return int
+     * @return Role
      */
-    public function getRole(): int {
+    public function getRole(): Role {
         return $this->role;
     }
 
     /**
-     * @param int $value
+     * @param Role $value
      */
-    public function setRole(int $value): void {
+    public function setRole(Role $value): void {
         $this->role = $value;
     }
 
@@ -100,30 +91,30 @@ class SAOPlayer extends Player {
     }
 
     /**
-     * @return string
+     * @return Guild
      */
-    public function getGuild(): string {
+    public function getGuild(): Guild {
         return $this->guild;
     }
 
     /**
-     * @param string $value
+     * @param Guild $value
      */
-    public function setGuild(string $value): void {
+    public function setGuild(Guild $value): void {
         $this->guild = $value;
     }
 
     /**
-     * @return int
+     * @return Party
      */
-    public function getParty(): int {
+    public function getParty(): Party {
         return $this->party;
     }
 
     /**
-     * @param int $value
+     * @param Party $value
      */
-    public function setParty(int $value): void {
+    public function setParty(Party $value): void {
         $this->party = $value;
     }
 

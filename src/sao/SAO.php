@@ -4,6 +4,7 @@ namespace sao;
 
 use pocketmine\plugin\PluginBase;
 use sao\data\Data;
+use sao\tasks\boss\BossEffectsTask;
 
 class SAO extends PluginBase {
 
@@ -27,6 +28,7 @@ class SAO extends PluginBase {
      * Activate plugin Events, Tasks ect.
      */
     public function onEnable(): void {
+        $this->getScheduler()->scheduleRepeatingTask(new BossEffectsTask($this), 20);
         $this->getLogger()->info("Successfully enabled!");
     }
 

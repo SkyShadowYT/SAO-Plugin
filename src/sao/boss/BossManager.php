@@ -2,6 +2,8 @@
 
 namespace sao\boss;
 
+use pocketmine\entity\Effect;
+use pocketmine\entity\EffectInstance;
 use pocketmine\entity\Entity;
 use pocketmine\entity\Skin;
 use pocketmine\math\Vector3;

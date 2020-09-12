@@ -19,6 +19,12 @@ class Data {
     /** @var BossManager $bossManager */
     private $bossManager;
 
+    /** @var RoleManager $roleManager */
+    private $roleManager;
+
+    /** @var GuildManager $guildManager */
+    private $guildManager;
+
     /** @var int ENTITY_NPC */
     const ENTITY_NPC = 0;
 
@@ -39,6 +45,8 @@ class Data {
         }
         $this->npcManager = new NpcManager($this);
         $this->bossManager = new BossManager($this);
+        $this->roleManager = new RoleManager($this);
+        $this->guildManager = new GuildManager($this);
 
         $this->loadAll();
     }
@@ -47,7 +55,8 @@ class Data {
      * Load all the data.
      */
     public function loadAll(): void {
-        $this->getBossManager()->generateBOSS();
+        $this->getRoleManager()->loadRoles();
+        $this->getGuildManager()->loadGuilds();
     }
 
     /**
@@ -56,7 +65,7 @@ class Data {
     public function createNewPlayer(SAOPlayer $sender): void {
         $profile = new Config($this->getPlugin()->getDataFolder() . "system/game/players/" . $sender->getName() . ",yml", Config::YAML);
         $data = [
-            "Role" => SAOPlayer::ROLE_PLAYER,
+            "Role" => "Player",
             "XP" => 0,
             "Level" => 0,
             "Money" => 0,
@@ -64,6 +73,7 @@ class Data {
             "Friends" => [],
         ];
         $profile->setAll($data);
+        $profile->save();
     }
 
     /**
@@ -71,11 +81,16 @@ class Data {
      */
     public function loadPlayerData(SAOPlayer $sender): void {
         $profile = new Config($this->getPlugin()->getDataFolder() . "system/game/players/" . $sender->getName() . ",yml", Config::YAML);
-        $sender->setRole($profile->get("Role"));
+        $role = $this->getRoleManager()->getRole($profile->get("Role"));
+        $guild = $this->getGuildManager()->getGuild($profile->get("Guild"));
+
+        $sender->setRole($role);
         $sender->setXp($profile->get("XP"));
         $sender->setLevelXP($profile->get("Level"));
         $sender->addMoney($profile->get("Money"));
-        $sender->setGuild($profile->get("Guild"));
+        if ($guild != null) {
+            $sender->setGuild($guild);
+        }
         $sender->addFriend($profile->get("Friends"));
     }
 
